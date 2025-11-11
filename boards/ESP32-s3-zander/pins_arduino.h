@@ -78,11 +78,9 @@ static const uint8_t T14 = 14;
 //----------------------
 
 // MAIN-IC2-BUS---------
-#define NRF24_CE_PIN 16
-#define NRF24_SS_PIN 17
 #define SPI_SCK_PIN 18
-#define SPI_MOSI_PIN 8
-#define SPI_MISO_PIN 46
+#define SPI_MOSI_PIN 17
+#define SPI_MISO_PIN 8
 #define SPI_SS_PIN 21
 static const uint8_t SS = SPI_SS_PIN; // Makes the SS,MOSI,MISO and SCK pins same as the SPI library
 static const uint8_t MOSI = SPI_MOSI_PIN;
@@ -92,9 +90,12 @@ static const uint8_t MISO = SPI_MISO_PIN;
 //----------------------
 
 // NRF24LO1--------------
-#define NRF24_MOSI_PINS SPI_MOSI_PIN
-#define NRF24_SCK_PIN SPI_SCK_PIN
-#define NRF24_MISO_PINS SPI_MISO_PIN
+#define NRF24_CE_PIN 16
+#define NRF24_SS_PIN 46
+#define NRF24_MOSI_PIN 17
+#define NRF24_SCK_PIN 18
+#define NRF24_MISO_PIN 8
+#define USE_NRF24_VIA_SPI
 //----------------------
 
 // SD-CARD-SETUP--------

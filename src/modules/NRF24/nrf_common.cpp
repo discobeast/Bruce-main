@@ -27,13 +27,9 @@ void nrf_info() {
 
 bool nrf_start() {
     pinMode(bruceConfigPins.NRF24_bus.cs, OUTPUT);
-    printf("1");
     digitalWrite(bruceConfigPins.NRF24_bus.cs, HIGH);
-    printf("2");
     pinMode(bruceConfigPins.NRF24_bus.io0, OUTPUT);
-    printf("3");
     digitalWrite(bruceConfigPins.NRF24_bus.io0, LOW);
-    printf("4");
 
     if (bruceConfigPins.NRF24_bus.mosi == (gpio_num_t)TFT_MOSI &&
         bruceConfigPins.NRF24_bus.mosi != GPIO_NUM_NC) { // (T_EMBED), CORE2 and others
@@ -62,7 +58,6 @@ bool nrf_start() {
         (int8_t)bruceConfigPins.NRF24_bus.mosi
     );
     delay(10);
-
     if (NRFradio.begin(
             NRFSPI,
             rf24_gpio_pin_t(bruceConfigPins.NRF24_bus.io0),
